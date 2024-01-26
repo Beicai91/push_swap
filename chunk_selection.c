@@ -40,7 +40,6 @@ void	selection_sort_max(t_ablist **a, t_ablist **b, int n, int check)
 	while (n > 0)
 	{
 		get_max(b, &len, &distance);
-		printf("len %d, distance %d\n", len, distance);
 		if (check >= 2)
 			sort_max_helper(a, b, distance, n);
 		else if (check == 1)
