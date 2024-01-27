@@ -34,9 +34,7 @@ void	selection_sort_max(t_ablist **a, t_ablist **b, int n, int check)
 {
 	int			distance;
 	int			len;
-	int			n_copy;
 
-	n_copy = n;
 	while (n > 0)
 	{
 		get_max(b, &len, &distance);
