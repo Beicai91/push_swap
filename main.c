@@ -62,15 +62,6 @@ int	main(int argc, char *argv[])
 		return (0);
 	}
 	get_sorted(&a, &b, quantity);
-
-	t_ablist		*temp;
-temp = a;
-while (temp != NULL)
-{
-	printf("%d, ", temp->value);
-	temp = temp->next;
-}
-
 	ft_free_stack(&a);
 	ft_free_stack(&b);
 	return (0);

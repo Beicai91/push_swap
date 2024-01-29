@@ -51,7 +51,8 @@ void					rrb(t_ablist **b);
 void					selection_sort_min(t_ablist **a, t_ablist **b, int n);
 void					sort_min_helper(t_ablist **a, t_ablist **b,
 							int distance, int len);
-void					selection_sort_max(t_ablist **a, t_ablist **b, int n, int check);
+void					selection_sort_max(t_ablist **a, t_ablist **b, int n,
+							int check);
 void					sort_max_helper(t_ablist **a, t_ablist **b,
 							int distance, int n);
 void					sort_max_helper2(t_ablist **a, t_ablist **b,
@@ -67,9 +68,8 @@ void					move_chunk_helper(t_ablist **a, t_ablist **b,
 							t_ablist *chepeast);
 t_ablist				*find_chepeast(t_ablist **a);
 void					move_chunk(t_ablist **a, t_ablist **b, int count);
-void					key_move(t_ablist **a, t_ablist **b, int *array, int quantity);
-
-
+void					key_move(t_ablist **a, t_ablist **b, int *array,
+							int quantity);
 
 void					chunk_selection(t_ablist **a, t_ablist **b,
 							int quantity);

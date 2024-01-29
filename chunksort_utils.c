@@ -108,4 +108,3 @@ void	get_max(t_ablist **lst, int *len, int *distance)
 		temp = temp->next;
 	}
 }
-
