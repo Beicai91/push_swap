@@ -49,6 +49,8 @@ int	main(int argc, char *argv[])
 	int			quantity;
 
 	if (argc < 2)
+		return (0);
+	if (argc == 2 && argv[1][0] == '\0')
 		report_error("Error");
 	a = NULL;
 	b = NULL;
