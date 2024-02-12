@@ -31,19 +31,12 @@ void	init_stack_a(char **strs, t_ablist **a, int argc)
 		ft_free(strs);
 }
 
-void	check_args_init(int argc, char **argv, t_ablist **a, int *i)
+void	check_args(char *nums[], int *i)
 {
-	char	**nums;
 	long	num;
 
-	*i = 0;
-	if (argc == 2)
-		nums = ft_split(argv[1], ' ');
-	else
-	{
-		*i = 1;
-		nums = argv;
-	}
+	if (nums[0] == NULL)
+		report_error("Error");
 	while (nums[(*i)])
 	{
 		if (!ft_isnum(nums[*i]))
@@ -57,5 +50,20 @@ void	check_args_init(int argc, char **argv, t_ablist **a, int *i)
 		}
 		(*i)++;
 	}
+}
+
+void	check_args_init(int argc, char **argv, t_ablist **a, int *i)
+{
+	char	**nums;
+
+	*i = 0;
+	if (argc == 2)
+		nums = ft_split(argv[1], ' ');
+	else
+	{
+		*i = 1;
+		nums = argv;
+	}
+	check_args(nums, i);
 	init_stack_a(nums, a, argc);
 }

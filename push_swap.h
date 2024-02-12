@@ -38,6 +38,7 @@ void					ft_free(char **nums);
 void					report_error(char *str);
 void					check_args_init(int argc, char **argv, t_ablist **a,
 							int *quantity);
+void					check_args(char *nums[], int *i);
 void					init_stack_a(char **strs, t_ablist **a, int argc);
 
 void					sa(t_ablist **a);
