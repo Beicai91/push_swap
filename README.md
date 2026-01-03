@@ -4,7 +4,8 @@ Push_swap is an algorithmic project that aims to sort a stack of integers using 
 The challenge lies in designing an efficient sorting strategy that minimizes the number of operations while respecting the constraints of stack-based manipulation. This project focuses on algorithm optimization, data structure manipulation, and complexity analysis.
 
 ## Technical notes
-- Stack number <= 100
+
+**Stack number <= 100** <br>
 The algorithm uses a chunk-based strategy driven by pivot values extracted from a sorted copy of the input. For each pivot, all elements in stack A are scanned, and values below the current threshold are marked as belonging to the active chunk.
 
 The program then repeatedly selects the marked element that can be brought to the top of stack A with the fewest rotations (`ra` or `rra`) and pushes it to stack B. This **greedy selection** minimizes the total number of operations during the transfer phase.
@@ -13,7 +14,7 @@ Using three pivot values, the input is effectively divided into four chunks. Aft
 
 In the final phase, a selection-sort–based strategy is used to firstly sort the remaining elements in stack A, then sort chunk by chunk stack B and remove elements in order to stack A. 
 
-- Stack number > 100
+**Stack number > 100** <br>
 For larger inputs, the program uses an **LSD radix sort** adapted to push_swap operations. Values are first normalized by assigning each node an index equal to its rank in the sorted order (0 for the smallest value up to N−1 for the largest). This avoids issues with negatives and reduces the range to a compact interval.
 
 The sort then iterates through each bit position of the maximum index (from least significant to most significant). For every bit pass:
