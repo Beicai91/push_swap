@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bcai <marvin@42lausanne.ch>                +#+  +:+       +#+        */
+/*   By: caibei <caibei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 15:59:01 by bcai              #+#    #+#             */
-/*   Updated: 2024/01/26 18:40:00 by bcai             ###   ########.fr       */
+/*   Updated: 2026/01/03 21:49:57 by caibei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "./libft/libft.h"
+# include "../lib/libft/libft.h"
 # include <stdio.h>
 # include <stdlib.h>
 
@@ -66,8 +66,8 @@ void					create_sort_array(t_ablist **a, int **array,
 							int quantity);
 int						get_moves(t_ablist **a, t_ablist *target);
 void					move_chunk_helper(t_ablist **a, t_ablist **b,
-							t_ablist *chepeast);
-t_ablist				*find_chepeast(t_ablist **a);
+							t_ablist *cheapest);
+t_ablist				*find_cheapest(t_ablist **a);
 void					move_chunk(t_ablist **a, t_ablist **b, int count);
 void					key_move(t_ablist **a, t_ablist **b, int *array,
 							int quantity);

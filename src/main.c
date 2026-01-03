@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bcai <marvin@42lausanne.ch>                +#+  +:+       +#+        */
+/*   By: caibei <caibei@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 15:57:58 by bcai              #+#    #+#             */
-/*   Updated: 2024/01/26 18:38:09 by bcai             ###   ########.fr       */
+/*   Updated: 2026/01/03 23:24:34 by caibei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	get_sorted(t_ablist **a, t_ablist **b, int quantity)
 	else if (quantity == 5)
 		sort_5(a, b);
 	else if (quantity <= 100)
-		chunk_selection(a, b, quantity);
+		chunk_selction(a, b, quantity);
 	else
 		radix_sort(a, b, quantity);
 }
